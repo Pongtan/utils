@@ -120,16 +120,7 @@ class Tools
         $html = str_replace($searchs, $replaces, $html);
         $html = addslashes($html);
         return $html;
-    }
-
-    /**
-     * @return string
-     */
-    public static function genSID()
-    {
-        $unid = uniqid(Config::get('key'));
-        return Hash::sha256WithSalt($unid);
-    }
+    } 
 
     public static function newTradeNum()
     {

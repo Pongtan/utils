@@ -19,7 +19,7 @@
        
     ],
     "psr-4": {
-      "Pongtan\\Utils": "src/Pongtan/Utils"
+      "Pongtan\\Utils\\": "src/Pongtan/Utils"
     }
   }
 }
