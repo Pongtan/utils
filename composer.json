@@ -1,13 +1,19 @@
 {
   "name": "pongtan/utils",
   "description": "The Pongtan Framework Utils bundle",
+  "keywords": [
+    "Pongtan",
+    "utils"
+  ],
+  "license": "MIT",
   "authors": [
     {
-      "name": "Xiaobin",
+      "name": "orvice",
       "email": "pongtan@orx.me"
     }
   ],
-  "require": { 
+  "require": {
+    "monolog/monolog": "^1.19"
   },
   "require-dev": {
     "phpunit/phpunit": "~5.0"
@@ -16,10 +22,9 @@
     "classmap": [
     ],
     "files": [
-       
     ],
     "psr-4": {
-      "Pongtan\\Utils\\": "src/Pongtan/Utils"
+      "Pongtan\\Utils\\": "src"
     }
   }
 }
