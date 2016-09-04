@@ -5,6 +5,7 @@ namespace Pongtan\Utils;
 
 use Monolog\Logger as MonoLogger;
 use Monolog\Handler\StreamHandler;
+use Psr\Log\LoggerInterface;
 
 class Logger
 {
@@ -12,7 +13,7 @@ class Logger
      * @param $name
      * @param $path
      * @param int $level
-     * @return MonoLogger
+     * @return LoggerInterface
      */
     public static function newLogger($name, $path, $level = MonoLogger::DEBUG)
     {
