@@ -2,7 +2,8 @@
 
 namespace Pongtan\Utils;
 
- 
+use Ramsey\Uuid\Uuid;
+use Ramsey\Uuid\Exception\UnsatisfiedDependencyException;
 
 class Tools
 {
@@ -126,5 +127,21 @@ class Tools
     {
         $tradeNum = sprintf('%d%d', time(), mt_rand(1000, 9999));
         return $tradeNum;
+    }
+
+    /**
+     * @return string
+     */
+    public static function genUUID()
+    {
+        try {
+            $uuid = Uuid::uuid5(Uuid::NAMESPACE_DNS, Uuid::uuid1()->toString());
+        } catch (UnsatisfiedDependencyException $e) {
+            $time = Time::getMicroTime();
+            $string = sprintf('%d', $time);
+            return $string;
+
+        }
+        return $uuid->toString();
     }
 }

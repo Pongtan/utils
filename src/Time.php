@@ -13,4 +13,14 @@ class Time
     {
         return date('Y-m-d', time());
     }
+
+    /**
+     * @return float
+     */
+    public static function getMicroTime()
+    {
+        $milliseconds = round(microtime(true) * 1000);
+
+        return $milliseconds;
+    }
 }
